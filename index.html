@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.min.css">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <!--Header & banner start-->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand mt-4" href="#">
+        <p class="me-5">Designin</p> 
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav m-auto p-auto">
+                <li class="nav-item px-1">
+                    <a class="nav-link" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item px-1">
+                    <a class="nav-link" href="#product">Product</a>
+                </li>
+                <li class="nav-item px-1">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item px-1">
+                    <a class="nav-link" href="#packages">Packages</a>
+                </li>
+                <li class="nav-item px-1">
+                    <a class="nav-link" href="todos.html">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex masuk" role="search">
+              <button type="button" class="btn me-2 rounded-pill pe-4 ps-4 " style="border-color: rgb(0, 53, 151); color:rgb(0, 53, 151);" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Login
+              </button>
+              <button class="btn rounded-pill  daftar" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container rounded-5" >
+  <div class="row">
+    <div class="col-3 col-md-6 col-lg-6 p-5">
+      <div class="judul_awal pt-5" style="font-family: Poppins; ">
+        <h1 style="font-weight: 700; font-size: 55px;" >Welcome To <br>Designin</h1>
+        <p style="font-size: 18px; color: rgb(0, 53, 151);">Menyediakan Jasa Dsain Logo yang Profesional <br> cepat dengan harga terjangkau dan Berkualitas.</p>
+        <button type="button" class="btn rounded-pill"  style="font-size: 20px; border-color: rgb(33, 111, 255); border-width: 2px;"> <a href="#packages" style="text-decoration: none; color: rgb(33, 111, 255);"> Order Now </a> </button>
+      </div>
+    </div>
+    <div class="col-6 col-md-6 col-lg-6 d-flex justify-content-end">
+      <img src="img/home.jpg" alt="" style="width: 100%;">
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email or Username</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="masuk()">Masuk</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputAddress">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">password</label>
+            <input type="password" class="form-control" id="inputAddress2">
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Saya yakin dengan yang sudah saya isi
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="daftar()">Masuk</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--Header & banner end -->
+    <!--Product feature start-->
+    <div id="product" class="product_feature1 m-5">
+        <div class="container">
+            <div class="judul text-center">
+                <h5 style="font-family: Nunito; font-weight: 700; color: rgb(0, 53, 151);">Our Feature</h5>
+                <h2 style="font-family: Nunito; font-weight: 800; color: rgb(0, 53, 151);">Apa yang membuat kami berbeda dengan jasa lainnya?</h2>
+            </div>
+            <div class="row mt-5" style="text-align: justify;">
+                <div class="col-md-4 col-lg-4 col-sm-4 ">
+                    <div class="card" style="border: 0;">
+                        <div class="card-body">
+                            <div class="row ">
+                                <div class="col-2 " style="height:100% ;">
+                                    <i class="fa-solid fa-people-group fa-2xl " style="margin-top: 60px; color: rgb(62, 203, 228);"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h5 class="card-title" style=" color: rgb(41, 129, 145); ">Persuasive Design</h5>
+                                    <p class="card-text">Desain UI website dan konten kreatif lebih menarik perhatian, dibuat langsung dari tim visual desain berpengalaman.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4">
+                    <div class="card" style="border: 0;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2 " >
+                                    <i class="fa-sharp fa-solid fa-gauge-high fa-2xl " style="margin-top: 60px;  color: rgb(62, 203, 228);"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h5 class="card-title" style=" color: rgb(41, 129, 145);">Fast Work, Fast Launch</h5>
+                                    <p class="card-text">Kami memprioritaskan projek anda ditangani lebih cepat dengan hasil rapih dan profesional di mata konsumen anda.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4">
+                    <div class="card"  style="border: 0;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2 " >
+                                    <i class="fa-solid fa-toolbox fa-2xl " style="margin-top: 70px;  color: rgb(62, 203, 228);"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h5 class="card-title" style=" color: rgb(41, 129, 145);">Free Maintenance</h5>
+                                    <p class="card-text">Anda awam dengan UI/UX web design? Tidak perlu khawatir. Kami memberikan support penuh kepada anda, agar anda mendapatkan hal yang anda inginkan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row " style="text-align: justify;">
+                <div class="col-md-4 col-lg-4 col-sm-4 ">
+                    <div class="card"  style="border: 0;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2 " >
+                                    <i class="fa-solid fa-eye fa-2xl " style="margin-top: 60px;  color: rgb(62, 203, 228);"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h5 class="card-title" style=" color: rgb(41, 129, 145);">Transparancy</h5>
+                                    <p class="card-text">Nilai keterbukaan kami kepada klien sangat dijunjung tinggi guna mendapatkan kenyamanan dan kepercayaan dari anda.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4">
+                    <div class="card" style="border: 0;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2 " >
+                                    <i class="fa-solid fa-chart-pie fa-2xl " style="margin-top: 60px;  color: rgb(62, 203, 228);"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h5 class="card-title" style="color: rgb(41, 129, 145);">Legal Business</h5>
+                                    <p class="card-text">Projek anda ditangani oleh tim yang tepat, memiliki badan usaha yang sah, dan tentunya berintegritas tinggi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4">
+                    <div class="card" style="border: 0;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2 " >
+                                    <i class="fa-sharp fa-solid fa-shield-halved fa-2xl" style="margin-top: 60px;  color: rgb(62, 203, 228);"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h5 class="card-title" style="color: rgb(41, 129, 145);">Guaranteed</h5>
+                                    <p class="card-text">Layanan yang kami berikan memiliki garansi penuh atas kepuasan pelanggan yang menjadi prioritas kami.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-6 ">
+                    <img src="img/4905784.jpg" style="width: 100%;">
+                </div>
+                <div class="col-6 mt-5">
+                    <div class="judul_2 ">
+                        <h6 style="font-family: Nunito; font-weight: 700; color: rgb(0, 53, 151);">TESTIMONIALS</h6>
+                        <h2 style="font-family: Nunito; font-weight: 800; color: rgb(0, 53, 151);">Apa Kata Klien Kami?</h2>
+                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner" style="text-align: justify;">
+                              <div class="carousel-item active" data-bs-interval="5000">
+                                <p class="fs-5 " style="font-weight: 400;">" Desain yang diharapkan sesuai denag ekspektasi dari kami. Pengerjaan desain webnya juga sangat cepat dan harganya relatif murah "</p>
+                                <div class="name_responden fs-5 text-end" >
+                                    <p class="fs-6"><strong>Iskandar Makachi</strong> <br> PT. Nusa Indah</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item" data-bs-interval="5000">
+                                <p class="fs-5 " style="font-weight: 400;">" Penjualan toko online saya meningkat dengan luar biasa dengan adanya website yang telah di desain oleh Designin, dan juga admin nya ramah dan fast respon  "</p>
+                                <div class="name_responden fs-5 text-end" >
+                                    <p class="fs-6"><strong>Agnes Milika</strong> <br> Adasemua.com</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <p class="fs-5 " style="font-weight: 400;">" Dengan ada nya desain yang dibuat oleh Desainin dan juga dengan pengerjaan yang cepat dan pelayanan yang ramah, kami sangat terbantu dalam pembangunan usaha online kami "</p>
+                                <div class="name_responden fs-5 text-end" >
+                                    <p class="fs-6"><strong>Corry Chu </strong> <br> KrukKruk.com</p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Product feature end-->
+
+    <!--About & pricing start-->
+    <div id="about" class="container">
+        <div class="judul text-center">
+            <h5 style="font-family: Nunito; font-weight: 700; color: rgb(0, 53, 151);">About Us</h5>
+            <h2 style="font-family: Nunito; font-weight: 800; color: rgb(0, 53, 151);">Tentang Designin</h2>
+        </div>
+        <div class="row mt-5">
+            <div class="col-7 pe-5" style="text-align: justify;">
+              <h1 style="color: rgb(2, 84, 236);" class="pb-2">Sejarah kami</h1>
+              <p>
+                Website ini dibuat pada tanggal 20 November 2022, yang mana website ini dibuat tujuan utama adalah untuk tugas MBKM yang akan di kumpulkan pada 20 November 2022, dan berencana di kembangkan ke tingkat yang lebih baik, dan harapan nya bisa berfungsi seperti yang diinginkan. </p>
+                <p> Website ini berjalan dibidang penjualan jasa , lebih tepatnya jasa pembuatan design UI/UX. design UI/UX yang dibuat adalah hasil diskusi dari designer dengan klien.
+                Website ini juga dibuat untuk mempermudah para pengusaha yang baru memulai usahanya untuk mereka memiliki website yang menggambarkan karakter dari usaha mereka. 
+              </p>
+            </div>
+            <div class="col-5">
+              <img class="w-100 rounded-4" src="img/about_1.jpg" alt="">
+            </div>
+          </div>
+    </div>
+    </div>
+    <div class="container p-5">
+      <div class="judul_about text-center pb-3">
+        <h1 style="color: rgb(2, 84, 236);" >Bagaimana Kami Bekerja</h1>
+      </div>
+      <div class="row">
+        <div class="col-3 pe-3" style="text-align: justify;">
+          <img class="w-100 mb-4 rounded-2" src="img/about_work1.jpg" alt="">
+          <p>
+            1. Melakukan diskusi dengan klien. Hal ini dilakukan, agar design web yang dihasilkan oleh designer sesuai dengan yang diharapkan dengan klien. 
+          </p>
+        </div>
+        <div class="col-3 pe-3" style="text-align: justify;">
+          <img class="w-100 mb-4 rounded-2" src="img/about_work2.jpg" alt="">
+          <p>
+            2. Membuat design website. Design website dibuat hasil dari diskusi dengan klien yang dilakukan sebelumnya.
+          </p>
+        </div>
+        <div class="col-3 pe-3" style="text-align: justify;">
+          <img class="w-100 mb-4 rounded-2" src="img/about_work3.jpg" alt="">
+          <p>
+            3. Melakukan revisi. Hal ini dilakukan jika klien merasa, yang mereka harapkan masih belum tercapai, maka dilakukan revisi yang bertujuan untuk membuat logo menjadi lebih baik. 
+          </p>
+        </div>
+        <div class="col-3 pe-3" style="text-align: justify;">
+          <img class="w-100 mb-4 rounded-2" src="img/about_work4.jpg" alt="">
+          <p>
+            4. Design wevsite berhasil dibuat. Setelah melakukan revisi, designer akan melakukan redesign terhadap design website yang sudah dibuat, lalu dihasilkanlah design website yang sesuai dengan klien inginkan.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container mb-5"id="packages">
+    <div class="judul text-center mb-3">
+        <h5 style="font-family: Nunito; font-weight: 700; color: rgb(0, 53, 151);">Pricing</h5>
+        <h2 style="font-family: Nunito; font-weight: 800; color: rgb(0, 53, 151);">Harga yang kami tawarkan</h2>
+    </div>
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-sm-4 kartu">
+              <div >
+                <h5 class="text-light p-3"></h5>
+              </div>
+              <div class="border text-center rounded shadow pb-3 pt-3">
+                <h5 class=" pt-4">Paket Bronze</h5>
+                <p>Murah tapi tidak murahan</p>
+                <div class="row pt-3">
+                  <div class="col text-end" style="margin-right:-20px ;">
+                    <div class="text-black-50">
+                      <h6><s>Rp 59.900</s></h6>
+                    </div>
+                  </div>
+                  <div class="col text-start">
+                    <button class="bg-info bg-opacity-75 text-light  rounded-pill" style="cursor: auto; border: none;" >
+                      <h7 class="  pt-1">DISKON 50%</h7>
+                    </button>
+                  </div>
+                </div>
+                <h1><sup>Rp</sup> 29.900</h1>
+                <div class="pesan">
+                  <button type="button" class="btn btn-info text-light m-3 p-2 fs-7 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Beli Sekarang
+                  </button>
+                  <p class="text-black-50">Yang kamu dapatkan</p>
+                  <div class="text-start ps-5">
+                    <div class="row">
+                      <div class="col-1">
+                        <i class="fa-solid fa-circle-xmark" style="color: red;"></i>
+                      </div>
+                      <div class="col-11">
+                        <p>Responsive Design</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-1">
+                        <i class="fa-solid fa-circle-xmark" style="color: red;"></i>
+                      </div>
+                      <div class="col-11">
+                        <p>Wireframes</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-1">
+                        <i class="fa-solid fa-circle-xmark" style="color: red;"></i>
+                      </div>
+                      <div class="col-11">
+                        <p>Prototype</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-1">
+                        <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                      </div>
+                      <div class="col-11">
+                        <p>Source File</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-1">
+                        <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                      </div>
+                      <div class="col-11">
+                        <p>1 pages</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-1">
+                        <i class="fa-solid fa-circle-xmark" style="color: red;"></i>
+                      </div>
+                      <div class="col-11">
+                        <p>Custom asset design</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-1">
+                        <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                      </div>
+                      <div class="col-11">
+                        <p>5 melakukan revisi</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-1">
+                        <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                      </div>
+                      <div class="col-11">
+                        <p>1 hari pengerjaan</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 col-sm-4 kartu">
+            <div class="border border-warning text-center rounded shadow">
+              <div class="bg-warning rounded-top">
+                <h5 class="text-light p-2">Paket Terlaris</h5>
+              </div>
+              <div class="pb-3 pt-3">
+                <h5 class="pt-3">Paket Silver</h5>
+              <p>Harga terjangkau, kualitas yang terbaik</p>
+              <div class="row p-2">
+                <div class="col text-end" style="margin-right:-20px ;">
+                  <div class="text-black-50 ">
+                    <h6><s>Rp 119.900</s></h6>
+                  </div>
+                </div>
+                <div class="col text-start">
+                  <button class="bg-warning bg-opacity-75 text-light  rounded-pill" style="cursor: auto; border: none;" >
+                    <h7 class=" pt-1">DISKON 50%</h7>
+                  </button>
+                </div>
+              </div>
+              <h1><sup>Rp</sup>59.900</h1>
+              <div class="pesan">
+                <button type="button" class="btn btn-warning text-light m-3  fs-7 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Beli Sekarang
+                </button>
+                <p class="text-black-50">Yang kamu dapatkan</p>
+                <div class="text-start ps-5">
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Responsive Design</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-xmark" style="color: red;"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Wireframes</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Prototype</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Source File</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>10 pages</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>5 Custom asset design</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Bebas melakukan revisi</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>3 hari pengerjaan</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 col-sm-4kartu">
+            <div >
+              <h5 class="text-light p-3"></h5>
+            </div>
+            <div class="border text-center rounded shadow pt-3 pb-3">
+              <h5 class="pt-3">Paket Gold</h5>
+              <p>Harga mahal selalu punya alasan</p>
+              <div class="row pt-3">
+                <div class="col text-end" style="margin-right:-20px ;">
+                  <div class="text-black-50 ">
+                    <h6><s>Rp 199.900</s></h6>
+                  </div>
+                </div>
+                <div class="col text-start">
+                  <button class="bg-info bg-opacity-75 text-light  rounded-pill" style="cursor: auto; border: none;" >
+                    <h7 class="  pt-1">DISKON 50%</h7>
+                  </button>
+                </div>
+              </div>
+              <h1><sup>Rp</sup> 99.900</h1>
+              <div class="pesan">
+                <button type="button" class="btn btn-info text-light m-3 p-2 fs-7 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Beli Sekarang
+                </button>
+                <p class="text-black-50">Yang kamu dapatkan</p>
+                <div class="text-start ps-5">
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Responsive Design</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Wireframes</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Prototype</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Source File</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>20 pages</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>10 Custom asset design</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>Bebas melakukan revisi</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-check" style="color: rgb(55, 190, 55);"></i>
+                    </div>
+                    <div class="col-11">
+                      <p>5 hari pengerjaan</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Pemesanan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Nama Perusahaan/usaha</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Nama pemesan</label>
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Detail Pesanan</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary" onclick="contoh()">Kirim</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <!--About & pricing end-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

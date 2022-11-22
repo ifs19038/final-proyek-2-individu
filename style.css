@@ -1,0 +1,24 @@
+.navbar-brand p{
+    font-family: 'Viga', sans-serif;
+    font-size: 25px;
+    background: -webkit-linear-gradient(45deg, #00c3ff, #000000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;
+}
+.nav-item a{
+    font-size: 14px;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Poppins';
+}
+
+.nav-item a:hover{
+    border-radius: 50px;
+    background-color: #034694;
+    color: #fff;
+    transition: 0.5s ;
+}
+.masuk button:hover{
+    background-color: #d2e6fca1;
+}
+.judul_awal h1{
+    background: -webkit-linear-gradient(45deg, #00c3ff, #000000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;
+}
